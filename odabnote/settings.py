@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'photo',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,19 @@ WSGI_APPLICATION = 'odabnote.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'wanote',
+        'USER': 'root',
+        'PASSWORD': 'gudfuf09',
+        'HOST': '',
+        'POST': '',
+
     }
+
 }
+DATABASE_OPTIONS = {'charset': 'utf8'}
+TIME_ZONE = 'Asia/Seoul'
+LANGUAGE_CODE = 'ko-kr'
 
 
 # Password validation
